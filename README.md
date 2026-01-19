@@ -6,7 +6,7 @@ Send Windows desktop notifications from Claude Code running in WSL.
 
 - **Task Complete**: Get notified when Claude finishes and is waiting for input
 - **Permission Required**: Get notified when Claude needs your permission for a tool
-- **Test Command**: Verify notifications are working with `/wsl-notify:test`
+- **Error Detection**: Get notified when a tool encounters an error
 
 ## Prerequisites
 

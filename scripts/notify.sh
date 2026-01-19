@@ -39,6 +39,16 @@ case "$hook_event" in
             "$WSL_NOTIFY" -c "Claude Code" "Permission Required: $tool_name"
         fi
         ;;
+    "PostToolUse")
+        # Check if tool result indicates an error
+        tool_result=$(echo "$input" | jq -r '.tool_result // ""')
+        tool_name=$(echo "$input" | jq -r '.tool_name // "unknown tool"')
+
+        # Check for error patterns in the result
+        if echo "$tool_result" | grep -qiE '(error|failed|exception|fatal|exit code [1-9])'; then
+            "$WSL_NOTIFY" -c "Claude Code" "Error in $tool_name"
+        fi
+        ;;
     *)
         # Unknown event, do nothing
         ;;
