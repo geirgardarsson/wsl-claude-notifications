@@ -13,7 +13,7 @@
       "author": {
         "name": "Geir Gardarsson"
       },
-      "source": ".",
+      "source": "./",
       "category": "productivity",
       "homepage": "https://github.com/geirgardarsson/wsl-claude-notifications"
     }
