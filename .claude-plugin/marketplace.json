@@ -1,0 +1,21 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "geir-plugins",
+  "description": "Personal Claude Code plugins by Geir",
+  "owner": {
+    "name": "Geir Gardarsson"
+  },
+  "plugins": [
+    {
+      "name": "wsl-notify",
+      "description": "Windows desktop notifications for Claude Code running in WSL. Get notified when Claude finishes tasks or needs permission.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Geir Gardarsson"
+      },
+      "source": ".",
+      "category": "productivity",
+      "homepage": "https://github.com/geirgardarsson/wsl-claude-notifications"
+    }
+  ]
+}
