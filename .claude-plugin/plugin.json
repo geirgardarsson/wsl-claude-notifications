@@ -1,0 +1,9 @@
+{
+  "name": "wsl-notify",
+  "version": "1.0.0",
+  "description": "Windows desktop notifications for Claude Code running in WSL",
+  "author": {
+    "name": "Geir"
+  },
+  "keywords": ["wsl", "notifications", "windows", "toast"]
+}
