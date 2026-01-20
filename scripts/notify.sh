@@ -31,13 +31,10 @@ case "$hook_event" in
     "Stop")
         "$WSL_NOTIFY" -c "Claude Code" "Claude is ready - Waiting for your input"
         ;;
-    "PreToolUse")
-        # Only notify if permission mode is "ask" (user will be prompted)
-        permission_mode=$(echo "$input" | jq -r '.permission_mode // "allow"')
-        if [[ "$permission_mode" == "ask" ]]; then
-            tool_name=$(echo "$input" | jq -r '.tool_name // "unknown tool"')
-            "$WSL_NOTIFY" -c "Claude Code" "Permission Required: $tool_name"
-        fi
+    "Notification")
+        # Permission prompt notification
+        message=$(echo "$input" | jq -r '.message // "Permission required"')
+        "$WSL_NOTIFY" -c "Claude Code" "$message"
         ;;
     "PostToolUse")
         # Check if tool result indicates an error
